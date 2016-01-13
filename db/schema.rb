@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160106011906) do
+ActiveRecord::Schema.define(version: 20160113015606) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -38,6 +38,10 @@ ActiveRecord::Schema.define(version: 20160106011906) do
     t.datetime "updated_at",                          null: false
     t.string   "name"
     t.string   "phone"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
